@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Universal Style */
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +6,19 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
     line-height: 1.6;
-    background-color: #fff; /* White background */
-    color: #333;
+    background-color: #fff;
+    color: #000000;
     padding: 20px;
 }
 
 /* Navigation Bar */
 header nav {
-    background-color: #333;
+    background-color: #000000;
     padding: 10px;
-    text-align: center;
+    text-align: right;
 }
 
 header nav a {
@@ -30,4 +31,138 @@ header nav a {
 header nav a:hover {
     color: #f4f4f4;
     text-decoration: underline;
+}
+
+/* Home Section */
+#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    color: #000000;
+    font-family: 'Space Mono', monospace;
+}
+
+/* Typing effect  */
+#home-heading {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Caret blinking effect */
+#typing-effect::after {
+    content: "|";
+    animation: blink 1s step-end infinite;
+}
+
+/* Blink animation */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* The about me section */
+#about {
+    margin: 50px 0;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-image {
+    width: 50%;
+}
+
+.about-image img {
+    width: 100%;  
+    height: 200;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+/* Skills Section */
+#skills {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Title for the Skills section */
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Skills list displayed in columns */
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+#skills ul li {
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #skills ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+.interest {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin: 20px; 
+}
+
+.image-slider {
+    flex: 1; 
+    max-width: 33.33%; 
+}
+
+.image-slider img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.text-content {
+    flex: 2; 
+    padding-left: 20px;
+}
+
+.mission {
+    margin-top: 20px;
 }
