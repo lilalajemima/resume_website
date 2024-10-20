@@ -14,7 +14,7 @@ body {
     padding: 20px;
 }
 
-/* Navigation Bar */
+/* The navigation Bar */
 header nav {
     background-color: #000000;
     padding: 10px;
@@ -33,7 +33,7 @@ header nav a:hover {
     text-decoration: underline;
 }
 
-/* Home Section */
+/* The Home section */
 #home {
     height: 100vh;
     display: flex;
@@ -44,19 +44,19 @@ header nav a:hover {
     font-family: 'Space Mono', monospace;
 }
 
-/* Typing effect  */
+
 #home-heading {
     font-size: 2.5rem;
     text-align: center;
 }
 
-/* Caret blinking effect */
+
 #typing-effect::after {
     content: "|";
     animation: blink 1s step-end infinite;
 }
 
-/* Blink animation */
+
 @keyframes blink {
     50% {
         opacity: 0;
@@ -101,6 +101,72 @@ header nav a:hover {
     border-radius: 10px;
 }
 
+/*  the "Education & Experience"  */
+
+#experience {
+    background-color: #f5f5f5; 
+    padding: 40px 20px; 
+}
+
+.experience-container {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+#experience-heading {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 30px; 
+}
+
+.education-experience {
+    display: flex;
+    justify-content: space-between; 
+    gap: 40px; 
+    width: 100%;
+    align-items: flex-start; 
+}
+
+.education, .experience {
+    width: 48%; 
+}
+
+.education h3, .experience h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.education article, .experience article {
+    margin-bottom: 20px; 
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 20px; 
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+
+.education article time, .experience article time {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.education h4, .experience h4 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+
+
+
+
 
 
 /* Skills Section */
@@ -111,13 +177,13 @@ header nav a:hover {
     text-align: center;
 }
 
-/* Title for the Skills section */
+
 #skills h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
 }
 
-/* Skills list displayed in columns */
+
 #skills ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -133,7 +199,7 @@ header nav a:hover {
     font-size: 1.2rem;
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
     #skills ul {
         grid-template-columns: 1fr;
@@ -165,4 +231,49 @@ header nav a:hover {
 
 .mission {
     margin-top: 20px;
+}
+
+/*  for the contact section */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;
+    color: white
+     
+}
+
+.contact-image {
+    width: 30%;
+    margin-left: 100px;
+    object-fit: contain;
+}
+
+.contact-info {
+    width: 60%; 
+}
+
+.contact-info h2, h3, p {
+    margin: 10px 0;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button img {
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #555;
 }

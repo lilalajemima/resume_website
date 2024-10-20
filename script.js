@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const text = "Hello, I am Lilala Runiga Jemima 👋";
     let index = 0;
-    const speed = 100; // Speed of typing in milliseconds
+    const speed = 100; 
 
     function typeWriter() {
         if (index < text.length) {
