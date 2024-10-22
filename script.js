@@ -17,23 +17,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
     let currentIndex = 0; // Track the current image index
-    const images = document.querySelectorAll('.slider-image'); // Select all images
+    const images = document.querySelectorAll('.slider-image'); 
 
     function showImage(index) {
         images.forEach((image, i) => {
-            image.style.display = (i === index) ? 'block' : 'none'; // Show current image, hide others
+            image.style.display = (i === index) ? 'block' : 'none'; 
         });
     }
 
     document.getElementById('prevBtn').addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1; // Loop back to the last image
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1; 
         showImage(currentIndex);
     });
 
     document.getElementById('nextBtn').addEventListener('click', () => {
-        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1; // Loop back to the first image
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1; 
         showImage(currentIndex);
     });
+
+    function autoSlide() {
+        currentIndex = (currentIndex + 1) % totalImages; 
+        showImage(currentIndex);
+    }
+
+    // Set an interval for automatic sliding
+    const slideInterval = setInterval(autoSlide, 3000); 
 
     // Initial image display
     showImage(currentIndex);
